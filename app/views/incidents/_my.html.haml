@@ -1,0 +1,22 @@
+= form_for incident, remote: true do |f|
+  %p
+    = f.label  :mountain
+    = f.text_field :mountain
+  - if params[:action] == "new"
+    = f.hidden_field :latitude
+    = f.hidden_field :longitude
+  %p
+    = f.label  :when
+    = f.datetime_select :when
+  %p
+    = f.label  :title
+    = f.text_field :title
+  %p
+    = f.label  :description
+    %br/
+    = f.text_area :description, rows: 3
+  %p
+    - if incident.new_record? == true
+      = f.submit "Create"
+    - else
+      = f.submit "Update"

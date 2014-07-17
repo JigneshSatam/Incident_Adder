@@ -1,0 +1,15 @@
+%p#notice= notice
+%p
+  %strong Mountain:
+  = incident.mountain
+%p
+  %strong When:
+  = incident.when
+%p
+  %strong Title:
+  = incident.title
+%p
+  %strong Description:
+  = incident.description
+= link_to 'Edit', edit_incident_path(@incident), remote: true
+= link_to 'Back', incidents_path

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Climber</title>
+  <%#= javascript_include_tag 'prototype'%>
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <%= auto_discovery_link_tag(:rss, {:action=>'news'}) %>
+
+</head>
+<body>
+
+<%= yield %>
+
+</body>
+</html>
