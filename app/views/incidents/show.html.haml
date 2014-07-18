@@ -18,5 +18,3 @@
   %strong Description:
   = @incident.description
 = link_to 'Edit', edit_incident_path(@incident), remote: true
-|
-\#{link_to 'Back', incidents_path}#{render partial: "map", locals: { data: "#{@incident.id}.xml" }}
