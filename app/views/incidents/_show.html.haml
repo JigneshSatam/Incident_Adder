@@ -13,3 +13,6 @@
   = incident.description
 = link_to 'Edit', edit_incident_path(@incident), remote: true
 = link_to 'Back', incidents_path
+
+%script
+  document.getElementById("map_info").children.map.hide();

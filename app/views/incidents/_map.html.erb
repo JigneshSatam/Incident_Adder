@@ -17,9 +17,7 @@
      min-height: 400px;
      height: 400px;
 <%     end -%>
-     background-color: #FFFFFF;
-     border: 1px solid #999999;
-     padding: 10px;"></div>
+"></div>
 <script
   src="http://maps.google.com/maps?file=api&v=2&key=<%= google_key %>"
   type="text/javascript"></script>
@@ -31,6 +29,7 @@
 
     var show_path = "<%= url_for(:controller=>controller.controller_name, :action=>show_action, :id=>'REPLACEME') %>";
     return show_path.replace("REPLACEME", id);
+
   }
 
   function new_path() {
@@ -91,6 +90,7 @@
  function textFor(element, tag) {
    return element.getElementsByTagName(tag)[0].firstChild.nodeValue;
  }
+
 
  function addPoints(points) {
    var totlat = 0.0;
@@ -156,7 +156,6 @@
          GEvent.addListener(marker, "infowindowbeforeclose",
            function() {
              info = document.getElementById("map_info");
-
            }
          );
 
@@ -196,4 +195,5 @@
   if (data != nil) -%>
   loadXml('<%= data -%>');
 <%  end %>
+
 </script>
